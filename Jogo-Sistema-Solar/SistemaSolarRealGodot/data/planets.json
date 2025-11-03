@@ -1,0 +1,74 @@
+[
+  {
+	"name": "Sol",
+	"radius_km": 696340,
+	"a_au": 0.0,
+	"period_days": 0,
+	"color": "#FFD15C",
+	"fact": "Estrela central do Sistema Solar."
+  },
+  {
+	"name": "Mercúrio",
+	"radius_km": 2439.7,
+	"a_au": 0.387,
+	"period_days": 87.969,
+	"color": "#B3B3B3",
+	"fact": "Planeta mais próximo do Sol."
+  },
+  {
+	"name": "Vênus",
+	"radius_km": 6051.8,
+	"a_au": 0.723,
+	"period_days": 224.701,
+	"color": "#E1C699",
+	"fact": "Rotação retrógrada lenta."
+  },
+  {
+	"name": "Terra",
+	"radius_km": 6371.0,
+	"a_au": 1.0,
+	"period_days": 365.256,
+	"color": "#6CB2FF",
+	"fact": "Nosso lar."
+  },
+  {
+	"name": "Marte",
+	"radius_km": 3389.5,
+	"a_au": 1.524,
+	"period_days": 686.98,
+	"color": "#E07B62",
+	"fact": "O planeta vermelho."
+  },
+  {
+	"name": "Júpiter",
+	"radius_km": 69911,
+	"a_au": 5.203,
+	"period_days": 4332.59,
+	"color": "#DAB68C",
+	"fact": "O maior planeta."
+  },
+  {
+	"name": "Saturno",
+	"radius_km": 58232,
+	"a_au": 9.537,
+	"period_days": 10759.22,
+	"color": "#F2E3B0",
+	"fact": "Famoso pelos anéis."
+  },
+  {
+	"name": "Urano",
+	"radius_km": 25362,
+	"a_au": 19.191,
+	"period_days": 30685.4,
+	"color": "#A9E1E8",
+	"fact": "Eixo inclinado ~98°."
+  },
+  {
+	"name": "Netuno",
+	"radius_km": 24622,
+	"a_au": 30.068,
+	"period_days": 60190,
+	"color": "#6FA3FF",
+	"fact": "Ventos muito rápidos."
+  }
+]
