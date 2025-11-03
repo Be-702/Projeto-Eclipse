@@ -1,1 +1,1 @@
-Projeto Eclipse
+O Projeto Eclipse é um projeto sendo desenvolvido na aula INF1039 da Pontifícia Universidade Católica do Rio de Janeiro. Ele consiste de uma coletânea de jogos armazenadas dentro de um website para serem utilizados dentro da Fundação Planetário da Cidade do Rio de Janeiro, com o intuito de ensinar os visitantes de forma lúdica e interativa sobre astronomia e o cosmos. 
