@@ -1,0 +1,4 @@
+res://scenes/Main.tscn
+res://scripts/camera.gd
+res://scripts/Main.gd
+res://data/planets.json

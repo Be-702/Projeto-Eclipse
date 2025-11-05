@@ -1,0 +1,11 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1762333735
+README.md::TextFile::-1::1762177328::0::1::::<><><>0<>0<><>::
+::res://data/::1762167163
+planets.json::JSON::-1::1762167163::0::1::::<><><>0<>0<><>::
+::res://scenes/::1762167728
+Main.tscn::PackedScene::3573034129367792526::1762167728::0::1::::<><><>0<>0<><>::uid://cwdyfj0sd0kwg::::res://scripts/Main.gd
+Planet.tscn::PackedScene::-1::1762177846::0::1::::<><><>0<>0<><>::res://scripts/Planet.gd
+::res://scripts/::1762167758
+Main.gd::GDScript::6324655709634116754::1762167758::0::1::::<>Node2D<><>0<>0<><>::
+Planet.gd::GDScript::2610144591719674371::1762178030::0::1::::Planet<>Node2D<><>0<>0<><>::

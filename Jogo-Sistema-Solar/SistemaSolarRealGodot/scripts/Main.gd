@@ -18,23 +18,11 @@ func _ready() -> void:
 	cam.position = Vector2.ZERO
 	cam.zoom = Vector2.ONE
 	_load_solar_system()
-	info.text = "Escalas — Distância: %.0f px/AU | Tamanho: %.3f px/km | Tempo: x%.0f\\nPan: botão direito + arrastar | Zoom: scroll" % [AU_TO_PX, RADIUS_SCALE, TIME_SCALE]
+	info.text = "Escalas — Distância: %.0f px/AU | Tamanho: %.3f px/km | Tempo: x%.0f Pan: botão direito + arrastar | Zoom: scroll" % [AU_TO_PX, RADIUS_SCALE, TIME_SCALE]
 
 func _process(delta: float) -> void:
 	for p in bodies:
 		p.update_position(delta)
-
-func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion and Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
-		var mm: InputEventMouseMotion = event as InputEventMouseMotion
-		cam.position -= mm.relative * cam.zoom.x
-	
-	if event is InputEventMouseButton and event.pressed:
-		var mb: InputEventMouseButton = event as InputEventMouseButton
-		if mb.button_index == MOUSE_BUTTON_WHEEL_UP:
-			cam.zoom *= 0.9
-		elif mb.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			cam.zoom *= 1.1
 
 func _load_solar_system() -> void:
 	var f: FileAccess = FileAccess.open(DATA_FILE, FileAccess.READ)

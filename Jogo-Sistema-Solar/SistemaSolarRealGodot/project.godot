@@ -16,4 +16,5 @@ config/features=PackedStringArray("4.5")
 
 [rendering]
 
+textures/vram_compression/import_etc2_astc=true
 textures/default_filters=false
