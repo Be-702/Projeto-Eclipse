@@ -1,14 +1,222 @@
-.blue-center{
-    display:flex;
-    flex-direction:column;
-    align-items: center;
+:root{
+  --bg: #0b1f29;          /* fundo geral */
+  --panel: #0b1f29;       /* mantém igual ao fundo (cards “fundidos”) */
+  --nav: #0a0e12;         /* barra superior quase preta */
+  --tile: #0f1419;        /* botões do menu, pretinho grafite */
+  --line: #8d98a1;        /* contorno claro dos tiles e cards */
+  --text: #f2f6f8;        /* textos brancos suaves */
+  --muted: #b8c3c9;       /* textos secundários */
+  --caption-bg: #dcdfe1;  /* faixa cinza clara das legendas */
+  --caption-fg: #1b1f22;  /* texto escuro da legenda */
+  --accent: #ff9f1c;      /* dourado do logo (sutil no hover) */
+  --radius: 0.25rem; 
+  --gap: 1rem;
+  --shadow: 0 0.25rem 0.75rem rgba(0,0,0,.35);
+}
+
+*{ box-sizing: border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  background-image: url(fundo2.jpg);
+  background-repeat: repeat;
+  background-size: 128px 128px;
+  font: 400 1rem/1.5 system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+}
+
+/* NAVBAR */
+.nav{
+  background: var(--nav);
+  border-bottom: 0.0625rem solid #2a3136;
+  position: sticky; top:0; z-index: 10;
+}
+.nav__inner{
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--text);
+}
+.brand__logo{
+  inline-size: 2.25rem;
+  block-size: 2.25rem;
+  object-fit: contain;
+  filter: drop-shadow(0 0.125rem 0.25rem rgba(0,0,0,.35));
+}
+.brand__text{
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+/* MENU */
+.menu{
+  margin-left: auto;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.5rem;
+}
+.menu__link{
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  background: var(--tile);
+  border: 0.0625rem solid var(--line);
+  border-radius: var(--radius);
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+.menu__link:hover,
+.menu__link:focus-visible{
+  border-color: color-mix(in oklab, var(--line), var(--accent) 35%);
+  background: #141a21;
+  outline: none;
+  transform: translateY(-0.06rem);
+}
+
+/* PÁGINA */
+.page{
+  display: grid;
+  place-items: start center;
+  padding: 1.25rem 1rem 3rem;
+}
+.stack{
+  width: min(22rem, 100%);
+  display: grid;
+  gap: var(--gap);
+}
+
+/* CARDS */
+.game-card{
+  background: var(--panel);
+  border-radius: var(--radius);
+  box-shadow: none;
+  overflow: hidden;
+  border: 0.0625rem solid var(--line);
+}
+.game-card__media{
+  aspect-ratio: 16 / 9;
+  background: #0c1b22;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.game-card__media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.game-card__caption{
+  background: var(--caption-bg);
+  color: var(--caption-fg);
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 0.5rem 0.75rem;
+}
+
+.game-card--placeholder .placeholder{
+  color: #7b858b;
+}
+.game-card__media.placeholder{
+  border: 0.125rem dashed var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.18)),
+    #0c1b22;
+}
+.game-card__media.placeholder span{
+  padding: 0.5rem 0.75rem;
+  border-radius: 999rem;
+  border: 0.0625rem solid var(--line);
+  background: rgba(0,0,0,.22);
+  font-size: 0.95rem;
+}
+.game-card__caption.placeholder{
+  background: var(--caption-bg);
+  color: #6a7379;
+  font-style: italic;
+}
+
+/* Acessibilidade de foco */
+.game-card:focus-within{
+  outline: 0.1875rem solid color-mix(in oklab, var(--accent), white 30%);
+  outline-offset: 0.2rem;
+}
+
+@media (min-width: 48rem){
+  .stack{ width: min(26rem, 100%); }
+}
+
+h1{
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+}
+
+.center-middle,
+.center-justified {
+  text-align: center;        
+  max-width: 800px;         
+  margin-inline: auto;
+  padding-inline: 1rem;      
+  box-sizing: border-box;
+  border-left: none;
+  border-right: none;
 }
 
 
-.open-sans-yay {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+.center-justified { text-align: justify; }
+
+
+ul {
+  list-style-type: disc;          
+  list-style-position: outside;
+  margin: 0 0 1rem 1.25rem;       
+  padding-left: 0;
+}
+
+.cards-grid {
+  display: grid;
+  grid-auto-flow: column;   
+  justify-content: center;
+  grid-auto-columns: 250px; 
+  gap: 1rem;                
+  padding: 1rem;
+  justify-content: center;
+
+.card{
+  width: 250px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;                  /* Rounds image + footer together */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 350px;                     /* You can change this */
+  object-fit: cover;                 /* Prevents distortion */
+}
+
+.card-footer {
+  padding: 0.8rem 1rem;
+  background: #f7f7f7;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+
+/* Source - https://stackoverflow.com/q/8366957
+Posted by Misha Moroshko
+Retrieved 2025-11-19, License - CC BY-SA 3.0 */
+
+

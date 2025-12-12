@@ -1,37 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>"Magicas a reunião"</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ECLIPSE — Jogos</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="png" href="logo-eclipse.png">
 </head>
 <body>
-    <h1 class="open-sans-yay">Porque você deveria jogar magic the gathering</h1>
+  <!-- Header / Navbar -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#">
+        <img src="logo-eclipse.png" alt="ECLIPSE" class="brand__logo" />
+        <span class="brand__text"></span>
+      </a>
 
-    <p>
-        <b style="color:red"> Magic the gathering</b> é um <i>jogo de cartas colecionável</i> produzido pela <u>Wizards of the Coast.</u> Ele foi criado em 1993 em <span style="color:teal; background-color:bisque">Gary Gygax, e é um jogo</span> de cartas versus.
-    </p>
-    <div class="blue-center">
-    <div><img src="https://static.vecteezy.com/system/resources/thumbnails/015/510/119/original/2d-motion-orbits-around-the-sun-of-planets-in-the-solar-system-free-video.jpg" width="300"></div>
-    <div><img src="para padronagem espacial 01.jpg" width="300"></div>
+      <nav class="menu" aria-label="principal">
+        <a class="menu__link" href="index.html">Início</a>
+        <a class="menu__link" href="SobreNos.html">Sobre Nós</a>
+      </nav>
     </div>
-    <h2>aaaaaaaaaaaa</h2>
-    <ol>
-        <li>oi</li>
-        <li>tudo</li>
-        <li>bem</li>
-        <li>?</li>
-    </ol>
-    <ul>
-        <li>oi</li>
-        <li>tudo</li>
-        <li>bem</li>
-        <li>?</li>
-    </ul>
-</body>
+  </header>
 
+  <!-- Conteúdo -->
+  <main class="page">
+    <section class="stack" aria-label="lista de jogos">
+
+      <!-- Card 1 -->
+      <article class="game-card">
+        <a href="SimuladorPlanetas.html">
+        <div class="game-card__media">
+
+          <img src="jogo-simulador.jpg" alt="Imagem do Jogo simulador" />
+        </div>
+        <footer class="game-card__caption">Simulador do Sistema Solar</footer>
+        </a>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="game-card">
+        <a href="CorrendoDaPoluicaoNoturna.html">
+        <div class="game-card__media">
+          <img src="poluicao-noturna.jpg" alt="Imagem do Jogo Poluição noturna" />
+        </div>
+        <footer class="game-card__caption">Correndo da Poluição Noturna</footer>
+        </a>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="game-card">
+        <a href="BuracoNegro.html">
+        <div class="game-card__media">
+          <img src="buraco-negro.jpg" alt="Imagem do Jogo Buraco negro" />
+        </div>
+        <footer class="game-card__caption">Escapando do buraco negro</footer>
+        </a>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="game-card">
+        <a href="DesenhandoSignos.html">
+        <div class="game-card__media">
+          <img src="signos.jpg" alt="Imagem do Jogo Signos" />
+        </div>
+        <footer class="game-card__caption">Desenhando Constelações</footer>
+        </a>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="game-card">
+        <a href="MissãoPerseverança.html">
+        <div class="game-card__media">
+          <img src="https://th-thumbnailer.cdn-si-edu.com/Yjl6znvo9TwA23ec-e1aKOzJrb4=/fit-in/1600x0/filters:focal(376x182:377x183)/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/65/2f/652f6535-72f3-4a65-b7e4-154352ea8667/screen_shot_2016-08-04_at_44643_pm.png" alt="Imagem Jogo Perseverance" />
+        </div>
+        <footer class="game-card__caption">Explorando Marte</footer>
+        </a>
+      </article>
+
+    </section>
+  </main>
+</body>
 </html>
